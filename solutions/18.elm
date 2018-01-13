@@ -19,10 +19,9 @@ slice start end list =
       length = List.length list
       (normalStart, normalEnd) = (normalize start length, normalize end length)
       count = normalEnd - (normalStart - 1)
-      withoutStart = List.drop (normalStart - 1) list
-      withoutEnd = List.take count withoutStart
   in
-      withoutEnd
+      List.drop (normalStart - 1) list
+        |> List.take count
 
 sublist : Int -> Int -> List a -> List a 
 sublist start end list = 

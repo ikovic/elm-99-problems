@@ -11,7 +11,7 @@ gcd a b =
 
 coprime :  Int -> Int -> Bool
 coprime a b = 
-    if gcd a b == 1 then True else False
+    gcd a b == 1
 
 main =
     Html.text
